@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/icon_home"
+        android:title="@string/home"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/procurarMoedasFragment"
+        android:enabled="true"
+        android:icon="@drawable/icon_mercado"
+        android:title="@string/mercado"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/moedasFavoritasFragment"
+        android:enabled="true"
+        android:icon="@drawable/icon_favoritos_sem_preenchimento"
+        android:title="@string/favoritos"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/moedaCompradaFragment"
+        android:enabled="true"
+        android:icon="@drawable/icon_carteira"
+        android:title="@string/compras"
+        app:showAsAction="always">
+
+    </item>
+</menu>

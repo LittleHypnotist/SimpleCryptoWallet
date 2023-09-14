@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Carteira Cripto Offline</string>
+
+    <string name="procurar">Procurar criptomoeda</string>
+    <string name="nome">Nome</string>
+    <string name="sigla">Sigla da criptomoeda</string>
+    <string name="valor">Valor</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment2">Fuck</string>
+    <string name="nao_encontrada">Fuck - Procura outra</string>
+    <string name="vazia">Vazio</string>
+    <string name="mes1">1 mês</string>
+    <string name="minutos15">15 minutos</string>
+    <string name="hora1">1 hora</string>
+    <string name="hora4">4 horas</string>
+    <string name="dia1">1 dia</string>
+    <string name="semana1">1 semana</string>
+    <string name="home">Home</string>
+    <string name="mercado">Mercado</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="compras">Compras</string>
+    <string name="lista_10">Top 10 criptomoedas:</string>
+    <string name="info">Informações adicionais:</string>
+    <string name="supply">Moedas em circulação:</string>
+    <string name="maxsupply">Máximo de moedas:</string>
+    <string name="rank">Rank da moeda:</string>
+    <string name="MarketCap">Valor de mercado:</string>
+    <string name="procurar_compra">Procurar criptomoeda comprada</string>
+    <string name="info_compra">Informação criptomoeda comprada:</string>
+    <string name="adicionar_compra">Adicionar Compra</string>
+
+
+</resources>

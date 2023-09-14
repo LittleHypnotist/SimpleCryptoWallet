@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cryptoca.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detalhesFragment"
+            app:destination="@id/detalhesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_visualizarComprasFragment"
+            app:destination="@id/visualizarComprasFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalhesFragment"
+        android:name="com.example.cryptoca.fragment.DetalhesFragment"
+        android:label="DetalhesFragment">
+        <argument
+            android:name="data"
+            app:argType="com.example.cryptoca.CriptoBD.Data" />
+    </fragment>
+    <fragment
+        android:id="@+id/procurarMoedasFragment"
+        android:name="com.example.cryptoca.fragment.ProcurarMoedasFragment"
+        android:label="ProcurarMoedasFragment" >
+        <action
+            android:id="@+id/action_procurarMoedasFragment_to_detalhesFragment"
+            app:destination="@id/detalhesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moedasFavoritasFragment"
+        android:name="com.example.cryptoca.fragment.MoedasFavoritasFragment"
+        android:label="MoedasFavoritasFragment" >
+        <action
+            android:id="@+id/action_moedasFavoritasFragment_to_detalhesFragment"
+            app:destination="@id/detalhesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moedaCompradaFragment"
+        android:name="com.example.cryptoca.fragment.MoedaCompradaFragment"
+        android:label="MoedaCompradaFragment" >
+        <action
+            android:id="@+id/action_moedaCompradaFragment_to_comprasFragment"
+            app:destination="@id/comprasFragment" />
+        <action
+            android:id="@+id/action_moedaCompradaFragment_to_visualizarComprasFragment"
+            app:destination="@id/visualizarComprasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/comprasFragment"
+        android:name="com.example.cryptoca.fragment.ComprasFragment"
+        android:label="ComprasFragment" >
+        <argument
+            android:name="data"
+            app:argType="com.example.cryptoca.CriptoBD.Data" />
+    </fragment>
+    <fragment
+        android:id="@+id/visualizarComprasFragment"
+        android:name="com.example.cryptoca.fragment.VisualizarComprasFragment"
+        android:label="fragment_visualizar_compras"
+        tools:layout="@layout/fragment_visualizar_compras" >
+        <argument
+            android:name="data"
+            app:argType="com.example.cryptoca.CriptoBD.Data" />
+    </fragment>
+
+</navigation>

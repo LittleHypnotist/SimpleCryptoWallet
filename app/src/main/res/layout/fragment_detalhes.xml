@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/preto_1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/barraApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/favMoeda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:src="@drawable/icon_favoritos_sem_preenchimento"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/abreviacaoCripto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="288dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/favMoeda"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.513"
+            tools:text="BTC" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/precoPercentagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barraApp">
+
+        <TextView
+            android:id="@+id/percentagemTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/verde"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/detailChangeImageView"
+            app:layout_constraintTop_toBottomOf="@+id/precoTextView"
+            tools:text="Valor%" />
+
+        <TextView
+            android:id="@+id/precoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintStart_toEndOf="@+id/criptoImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Valor€" />
+
+        <ImageView
+            android:id="@+id/detailChangeImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/percentagemTextView"
+            app:layout_constraintStart_toStartOf="@+id/precoTextView"
+            app:layout_constraintTop_toTopOf="@+id/percentagemTextView"
+            tools:srcCompat="@drawable/icon_seta_ganho" />
+
+        <ImageView
+            android:id="@+id/criptoImageView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detalhesGrafico"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/precoPercentagem">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao1minuto"
+            android:layout_width="58dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:text="@string/mes1"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/botao1semana"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao1semana"
+            android:layout_width="58dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:text="@string/semana1"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/botao1minuto"
+            app:layout_constraintEnd_toStartOf="@+id/botao1minuto"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/botao1dia"
+            app:layout_constraintTop_toTopOf="@+id/botao1minuto" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao1dia"
+            android:layout_width="58dp"
+            android:layout_height="48dp"
+            android:background="@drawable/botao_detalhes"
+            android:text="@string/dia1"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/botao1semana"
+            app:layout_constraintEnd_toStartOf="@+id/botao1semana"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/botao4horas"
+            app:layout_constraintTop_toTopOf="@+id/botao1semana" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao4horas"
+            android:layout_width="58dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:text="@string/hora4"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/botao1dia"
+            app:layout_constraintEnd_toStartOf="@+id/botao1dia"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/botao1hora"
+            app:layout_constraintTop_toTopOf="@+id/botao1dia" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao1hora"
+            android:layout_width="58dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:text="@string/hora1"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/botao4horas"
+            app:layout_constraintEnd_toStartOf="@+id/botao4horas"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/botao15minutos"
+            app:layout_constraintTop_toTopOf="@+id/botao4horas" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao15minutos"
+            android:layout_width="58dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:text="@string/minutos15"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/botao1hora"
+            app:layout_constraintEnd_toStartOf="@+id/botao1hora"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/botao1hora" />
+
+        <WebView
+            android:id="@+id/graficoWebView"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/botao1minuto" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detalhesInfoCripto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fundo_detalhes"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detalhesGrafico"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/textMaxMoedasCirculacao"
+            android:layout_width="135dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/maxsupply"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextMoedasCirculacao">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textRank"
+            android:layout_width="109dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/rank"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textMaxMoedasCirculacao">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textMarketCap"
+            android:layout_width="122dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/MarketCap"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textRank">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/InfoText"
+            android:layout_width="223dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:text="@string/info"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TextMoedasCirculacao"
+            android:layout_width="152dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/supply"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/InfoText">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/MoedasCirculacao"
+            android:layout_width="137dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toEndOf="@+id/TextMoedasCirculacao"
+            app:layout_constraintTop_toBottomOf="@+id/InfoText"
+            tools:ignore="MissingConstraints"
+            tools:text="MoedasCirculaçao">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/MaxMoedasCirculacao"
+            android:layout_width="137dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toEndOf="@+id/textMaxMoedasCirculacao"
+            app:layout_constraintTop_toBottomOf="@+id/MoedasCirculacao"
+            tools:ignore="MissingConstraints"
+            tools:text="MaxMoedasCirculaçao">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/rank"
+            android:layout_width="63dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toEndOf="@+id/textRank"
+            app:layout_constraintTop_toBottomOf="@+id/MaxMoedasCirculacao"
+            tools:ignore="MissingConstraints"
+            tools:text="Rank">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/MarketCap"
+            android:layout_width="136dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toEndOf="@+id/textMarketCap"
+            app:layout_constraintTop_toBottomOf="@+id/rank"
+            tools:ignore="MissingConstraints"
+            tools:text="MCap">
+
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
